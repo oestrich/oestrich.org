@@ -86,10 +86,12 @@
 
 <h3><a href="http://oestri.ch">oestri.ch</a></h3></div>
 </div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/1">
+<h1>What is a Hypermedia API?</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/2">
 <h1>REST</h1>
 
 <h2>REpresentational State Transfer</h2></div>
-</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/2">
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/3">
 <h1>Relies heavily on HTTP</h1>
 
 <ul>
@@ -98,7 +100,7 @@
 <li>Client Server</li>
 </ul>
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/3">
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/4">
 <h1>Relies heavily on HTTP (Cont)</h1>
 
 <ul>
@@ -107,9 +109,9 @@
 <li>Uniform Interface (HATEOAS)</li>
 </ul>
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/4">
-<h1>Methods and URIs</h1></div>
 </div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/5">
+<h1>Methods and URIs</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/6">
 <h1>Five Routes</h1>
 
 <pre><code>GET    /orders
@@ -118,29 +120,29 @@ GET    /orders/:id
 PUT    /orders/:id
 DELETE /orders/:id
 </code></pre></div>
-</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/6">
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/7">
 <h1>GET /orders</h1>
 
 <p>List a set of orders</p></div>
-</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/7">
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/8">
 <h1>POST /orders</h1>
 
 <p>Create an order</p></div>
-</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/8">
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/9">
 <h1>GET /orders/:id</h1>
 
 <p>View a single order</p></div>
-</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/9">
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/10">
 <h1>PUT /orders/:id</h1>
 
 <p>Replace or create an order</p></div>
-</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/10">
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/11">
 <h1>DELETE /orders/:id</h1>
 
 <p>Delete an order</p></div>
-</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/11">
-<h1>A bit about HTTP Verbs</h1></div>
 </div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/12">
+<h1>A bit about HTTP Verbs</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/13">
 <h1>GET</h1>
 
 <ul>
@@ -149,7 +151,7 @@ DELETE /orders/:id
 
 
 <p class="notes">should never change a resource</p></div>
-</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/13">
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/14">
 <h1>POST</h1>
 
 <ul>
@@ -159,7 +161,7 @@ DELETE /orders/:id
 
 
 <p class="notes">no semantic meaning</p></div>
-</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/14">
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/15">
 <h1>PUT</h1>
 
 <ul>
@@ -169,14 +171,14 @@ DELETE /orders/:id
 
 
 <p class="notes">rails does this wrong</p></div>
-</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/15">
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/16">
 <h1>DELETE</h1>
 
 <ul>
 <li>Delete a resource</li>
 </ul>
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/16">
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/17">
 <h1>PATCH</h1>
 
 <ul>
@@ -186,9 +188,9 @@ DELETE /orders/:id
 
 
 <p class="notes">no current standard diff format, https://secure.designinghypermediaapis.com/nodes/much-ado-about-patch</p></div>
-</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/17">
-<h1>Media Types</h1></div>
 </div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/18">
+<h1>Media Types</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/19">
 <h1>Formats</h1>
 
 <ul>
@@ -197,7 +199,7 @@ DELETE /orders/:id
 <li>XHTML</li>
 </ul>
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/19">
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/20">
 <h1>Setting the Media Type</h1>
 
 <ul>
@@ -205,7 +207,7 @@ DELETE /orders/:id
 <li>Rails way - .:format</li>
 </ul>
 </div>
-</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/20">
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/21">
 <h1>Representation based</h1>
 
 <p>Models != Representations</p>

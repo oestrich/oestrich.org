@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Introduction to Hypermedia APIs</title>
+
+  <meta name="viewport" content="width=device-width"/>
+
+  <link rel="stylesheet" href="./css/reset.css" type="text/css"/>
+  <link rel="stylesheet" href="./css/showoff.css" type="text/css"/>
+
+  <script type="text/javascript" src="./js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="./js/jquery-print.js"></script>
+  <script type="text/javascript" src="./js/jquery.batchImageLoad.js"></script>
+
+  <script type="text/javascript" src="./js/jquery.doubletap-0.1.js"></script>
+
+  <script type="text/javascript" src="./js/fg.menu.js"></script>
+  <script type="text/javascript" src="./js/showoff.js"></script>
+  <script type="text/javascript" src="./js/jTypeWriter.js"> </script>
+  <script type="text/javascript" src="./js/sh_main.min.js"></script>
+  <script type="text/javascript" src="./js/core.js"></script>
+  <script type="text/javascript" src="./js/showoffcore.js"></script>
+  <script type="text/javascript" src="./js/coffee-script.js"></script>
+
+  <link type="text/css" href="./css/fg.menu.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/theme/ui.all.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/sh_style.css" rel="stylesheet" >
+
+  
+    <link rel="stylesheet" href="file/style.css" type="text/css"/>
+  
+
+  
+
+  <script type="text/javascript">
+  $(function(){
+      setupPreso(false, './');
+  });
+  </script>
+
+</head>
+
+<body>
+
+<a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="navmenu"><span class="ui-icon ui-icon-triangle-1-s"></span>slides</a>
+<div id="navigation" class="hidden"></div>
+
+<div id="help">
+  <table>
+    <tr><td class="key">z, ?</td><td>toggle help (this)</td></tr>
+    <tr><td class="key">space, &rarr;</td><td>next slide</td></tr>
+    <tr><td class="key">shift-space, &larr;</td><td>previous slide</td></tr>
+    <tr><td class="key">d</td><td>toggle debug mode</td></tr>
+    <tr><td class="key">## &lt;ret&gt;</td><td>go to slide #</td></tr>
+    <tr><td class="key">c, t</td><td>table of contents (vi)</td></tr>
+    <tr><td class="key">f</td><td>toggle footer</td></tr>
+    <tr><td class="key">r</td><td>reload slides</td></tr>
+    <tr><td class="key">n</td><td>toggle notes</td></tr>
+    <tr><td class="key">p</td><td>run preshow</td></tr>
+  </table>
+</div>
+
+<div class="buttonNav">
+  <input type="submit" onClick="prevStep();" value="prev"/>
+  <input type="submit" onClick="nextStep();" value="next"/>
+</div>
+
+<div id="preso">loading presentation...</div>
+<div id="footer">
+  <span id="slideInfo"></span>
+  <span id="debugInfo"></span>
+  <span id="notesInfo"></span>
+</div>
+
+<div id="slides" class="offscreen" style="display:none;">
+<div class="slide" data-transition="none"><div class="content" ref="intro/01_slide">
+<h1>Introduction to Hypermedia APIs</h1>
+
+<h2>Eric Oestrich</h2>
+
+<h3><a href="http://twitter.com/ericoestrich">@ericoestrich</a></h3>
+
+<h3><a href="http://oestri.ch">oestri.ch</a></h3></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/1">
+<h1>REST</h1>
+
+<h2>REpresentational State Transfer</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/2">
+<h1>Relies heavily on HTTP</h1>
+
+<ul>
+<li>Methods and URIs</li>
+<li>Media types</li>
+<li>Client Server</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/3">
+<h1>Relies heavily on HTTP (Cont)</h1>
+
+<ul>
+<li>Stateless</li>
+<li>Caching</li>
+<li>Uniform Interface (HATEOAS)</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/4">
+<h1>Methods and URIs</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/5">
+<h1>Five Routes</h1>
+
+<pre><code>GET    /orders
+POST   /orders
+GET    /orders/:id
+PUT    /orders/:id
+DELETE /orders/:id
+</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/6">
+<h1>GET /orders</h1>
+
+<p>List a set of orders</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/7">
+<h1>POST /orders</h1>
+
+<p>Create an order</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/8">
+<h1>GET /orders/:id</h1>
+
+<p>View a single order</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/9">
+<h1>PUT /orders/:id</h1>
+
+<p>Replace or create an order</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/10">
+<h1>DELETE /orders/:id</h1>
+
+<p>Delete an order</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/11">
+<h1>A bit about HTTP Verbs</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/12">
+<h1>GET</h1>
+
+<ul>
+<li>Retrieve a resource</li>
+</ul>
+
+
+<p class="notes">should never change a resource</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/13">
+<h1>POST</h1>
+
+<ul>
+<li>Most generic verb</li>
+<li>Can use it for anything</li>
+</ul>
+
+
+<p class="notes">no semantic meaning</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/14">
+<h1>PUT</h1>
+
+<ul>
+<li>Update or Create a resouce, "Put this resource at this url"</li>
+<li>Must be the entire resource, not partial</li>
+</ul>
+
+
+<p class="notes">rails does this wrong</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/15">
+<h1>DELETE</h1>
+
+<ul>
+<li>Delete a resource</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/16">
+<h1>PATCH</h1>
+
+<ul>
+<li>Update a resource partially</li>
+<li>Must be a diff</li>
+</ul>
+
+
+<p class="notes">no current standard diff format, https://secure.designinghypermediaapis.com/nodes/much-ado-about-patch</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/17">
+<h1>Media Types</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/18">
+<h1>Formats</h1>
+
+<ul>
+<li>JSON</li>
+<li>XML</li>
+<li>XHTML</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/19">
+<h1>Setting the Media Type</h1>
+
+<ul>
+<li>Accept Headers</li>
+<li>Rails way - .:format</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rest/01_slide/20">
+<h1>Representation based</h1>
+
+<p>Models != Representations</p>
+
+<p class="notes">Models do not necessarily equal end representations</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="hateoas/01_slide/1">
+<h1>Uniform Interface</h1>
+
+<p class="notes">the part most people don't get right</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="hateoas/01_slide/2">
+<h1>Uniform Interface</h1>
+
+<ul>
+<li>Identification of resources</li>
+<li>Manipulation of resources via representations</li>
+<li>Self descriptive messages</li>
+<li>Hypermedia as the engine of application state</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="hateoas/01_slide/3">
+<h1>Identification of resources</h1>
+
+<p class="notes">This is what a user looks like</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="hateoas/01_slide/4">
+<h1>Manipulation of resources via representations</h1>
+
+<p class="notes">JSON, XML</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="hateoas/01_slide/5">
+<h1>Self descriptive messages</h1>
+
+<p>Statelessness</p>
+
+<p class="notes">Built into HTTP</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="hateoas/01_slide/6">
+<h1>Hypermedia as the engine of application state</h1>
+
+<p>HATEOAS</p>
+
+<p class="notes">The Rest of REST [Jon Moore Oredev 2010]</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="hateoas/01_slide/7">
+<h1>Clients should not know how to build routes</h1>
+
+<p class="notes">most important thing about hateoas</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="hateoas/01_slide/8">
+<h1>Enter HAL</h1>
+
+<p>JSON cannot describe a link</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="hateoas/01_slide/9">
+<h1>HAL is a media type for defining links in JSON</h1>
+
+<p>application/hal+json</p>
+
+<p class="notes">+json is actually doesn't mean "if you can't load application/hal treat me as json" it exapnds to "application/json"</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="hateoas/01_slide/10">
+<h1>The Goal</h1>
+
+<p>GET /</p>
+
+<p class="notes">GET / and walk the entire API</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rails/01_slide/1">
+<h1>Great, now I know what a Hypermedia API is.</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rails/01_slide/2">
+<h1>How do I make one?</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rails/01_slide/3">
+<h1>Rails + Lots of Gems</h1>
+
+<p>Also monkey patching</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rails/01_slide/4">
+<h1>Gems</h1>
+
+<ul>
+<li>ActiveModel::Serializer</li>
+<li>RspecApiDocumentation</li>
+<li>Raddocs</li>
+<li>A few other handy ones</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content command" ref="rails/01_slide/5">
+<h1>$ rails new hypermedia_api --skip-test-unit</h1></div>
+</div><div class="slide" data-transition="none"><div class="content command" ref="rails/01_slide/6">
+<h1>$ vim Gemfile</h1>
+
+<pre><code>gem 'raddocs'
+gem 'active_model_serializers'
+</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content command" ref="rails/01_slide/7">
+<h1>$ vim Gemfile</h1>
+
+<pre><code>group :test, :development do
+  gem 'rspec-rails'
+  gem 'rspec_api_documentation'
+end
+</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rails/01_slide/8">
+<h1>Get rspec set up</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rails/01_slide/9">
+<h1>Create our first acceptance test</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rails/01_slide/10">
+<h1>Generate models, index action, serializers</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rails/01_slide/11">
+<h1>Show</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rails/01_slide/12">
+<h1>Create</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rails/01_slide/13">
+<h1>Update</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rails/01_slide/14">
+<h1>Delete</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rails/01_slide/15">
+<h1>Set up HAL</h1>
+
+<p>Let the monkey patching begin</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rails/01_slide/16">
+<h1>We're missing something...</h1></div>
+</div><div class="slide" data-transition="none"><div class="content command" ref="rails/01_slide/17">
+<h1>$ curl http://localhost:300/</h1>
+
+<h1>""</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="rails/01_slide/18">
+<h1>Root resource</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="outro/01_slide">
+<h1>Questions?</h1>
+
+<h2>Eric Oestrich</h2>
+
+<h3><a href="http://twitter.com/ericoestrich">@ericoestrich</a></h3>
+
+<h3><a href="http://oestri.ch">oestri.ch</a></h3></div>
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+PUBLIC_WWW=$HOME/vhosts/oestrich.org
+
+unset GIT_DIR
+cd $PUBLIC_WWW
+git pull origin master
+rm build

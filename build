@@ -3,7 +3,7 @@ GIT_REPO=$HOME/repos/oestrich.org
 
 unset GIT_DIR
 
-if [ -d $TMP_GIT_CLONE ]; then
+if [ -d $PUBLIC_WWW ]; then
   cd $PUBLIC_WWW
   git pull origin master
 else

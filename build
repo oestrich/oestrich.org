@@ -1,6 +1,14 @@
 PUBLIC_WWW=$HOME/vhosts/oestrich.org
+GIT_REPO=$HOME/repos/oestrich.org
 
 unset GIT_DIR
-cd $PUBLIC_WWW
-git pull origin master
+
+if [ -d $TMP_GIT_CLONE ]; then
+  cd $PUBLIC_WWW
+  git pull origin master
+else
+  git clone $GIT_REPO $PUBLIC_WWW
+  cd $PUBLIC_WWW
+fi
+
 rm build

@@ -11,4 +11,4 @@ else
   cd $PUBLIC_WWW
 fi
 
-rm build
+rm -f build
